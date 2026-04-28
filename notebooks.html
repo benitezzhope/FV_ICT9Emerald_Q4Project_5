@@ -3,9 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Virtual Notebook</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<style>
+    body{
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('paper.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #8896ab;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #9bc7f4;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.main-content {
+  margin-left: 200px; /* match sidebar width */
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+</style>
 <body>
-    
+
+<div class="sidenav">
+  <a href="dashboard.html">Dashboard</a>
+  <a href="notebooks.html">Virtual Notebook</a>
+  <a href="tasks.html">Tasks</a>
+  <a href="profile.html">Profile</a>
+   <a href="index.html">Logout</a>
+</div>
+<!--Sidebar code from ws3schools-->
+
+<div class="main-content">
+    <div class="row justify-content-center gap-4">
+
+        <div class="col-auto" style="background-color: rgb(241,241,241); width: 350px; height: 285px; border-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+        <h2 style="margin-top: 10px; color: white; font-size: 20px; background-color: #d81fa7; border-radius: 10px; padding-left: 5px;">
+        <b>FILIPINO 📚</b></h2>
+
+        <img src="school.jpg" style="height: 110px; width: 100%; border-radius: 5px;">
+
+        <h1 style="font-size: medium; padding-top: 10px;">
+        <i>9-Emerald 2025-2026</i></h1>
+
+        <div class="row" style="padding-top: 50px;">
+        <div class="col">
+        <p>Ms. Francisco</p>
+        </div>
+
+        <div class="col">
+        <div style="background-color: #d81fa7; color: white; width: 80px; text-align: center; border-radius: 8px; margin-left: 68px;">OPEN</div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-auto" style="background-color: rgb(241,241,241); width: 350px; height: 285px; border-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+        <h2 style="margin-top: 10px; color: white; font-size: 20px; background-color: #3d932c; border-radius: 10px; padding-left: 5px;">
+        <b>SCIENCE 📚</b></h2>
+
+        <img src="school.jpg" style="height: 110px; width: 100%; border-radius: 5px;">
+
+        <h1 style="font-size: medium; padding-top: 10px;">
+        <i>9-Emerald 2025-2026</i></h1>
+
+        <div class="row" style="padding-top: 50px;">
+        <div class="col">
+        <p>Ms. Mendaro</p>
+        </div>
+
+        <div class="col">
+        <div style="background-color: #3d932c; color: white; width: 80px; text-align: center; border-radius: 8px; margin-left: 68px;">OPEN</div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-auto" style="background-color: rgb(241,241,241); width: 350px; height: 285px; border-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+        <h2 style="margin-top: 10px; color: white; font-size: 20px; background-color: #b61f1f; border-radius: 10px; padding-left: 5px;">
+        <b>ENGLISH 📚</b></h2>
+
+        <img src="school.jpg" style="height: 110px; width: 100%; border-radius: 5px;">
+
+        <h1 style="font-size: medium; padding-top: 10px;">
+        <i>9-Emerald 2025-2026</i></h1>
+
+        <div class="row" style="padding-top: 50px;">
+        <div class="col">
+        <p>Ms. Avila</p>
+        </div>
+
+        <div class="col">
+        <div style="background-color: #b61f1f; color: white; width: 80px; text-align: center; border-radius: 8px; margin-left: 68px;">OPEN</div>
+        </div>
+        </div>
+        </div>
+
+
+    <div class="row justify-content-center gap-4">
+
+
+        <div class="col-auto" style="background-color: rgb(241,241,241); width: 350px; height: 285px; border-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+        <h2 style="margin-top: 10px; color: white; font-size: 20px; background-color: #2c5c93; border-radius: 10px; padding-left: 5px;">
+        <b>MATH 📚</b></h2>
+
+        <img src="school.jpg" style="height: 110px; width: 100%; border-radius: 5px;">
+
+        <h1 style="font-size: medium; padding-top: 10px;">
+        <i>9-Emerald 2025-2026</i></h1>
+
+        <div class="row" style="padding-top: 50px;">
+        <div class="col">
+        <p>Mr. Verba</p>
+        </div>
+
+        <div class="col">
+        <div style="background-color: #2c5c93; color: white; width: 80px; text-align: center; border-radius: 8px; margin-left: 68px;">OPEN</div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-auto" style="background-color: rgb(241,241,241); width: 350px; height: 285px; border-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+        <h2 style="margin-top: 10px; color: white; font-size: 20px; background-color: #935e2c; border-radius: 10px; padding-left: 5px;">
+        <b>SOCIAL STUDIES 📚</b></h2>
+
+        <img src="school.jpg" style="height: 110px; width: 100%; border-radius: 5px;">
+
+        <h1 style="font-size: medium; padding-top: 10px;">
+        <i>9-Emerald 2025-2026</i></h1>
+
+        <div class="row" style="padding-top: 50px;">
+        <div class="col">
+        <p>Mr. Reynoso</p>
+        </div>
+
+        <div class="col">
+        <div style="background-color: #935e2c; color: white; width: 80px; text-align: center; border-radius: 8px; margin-left: 68px;">OPEN</div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-auto" style="background-color: rgb(241,241,241); width: 350px; height: 285px; border-radius: 10px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+
+        <h2 style="margin-top: 10px; color: white; font-size: 20px; background-color: #2c7d93; border-radius: 10px; padding-left: 5px;">
+        <b>VALUES EDUCATION 📚</b></h2>
+
+        <img src="school.jpg" style="height: 110px; width: 100%; border-radius: 5px;">
+
+        <h1 style="font-size: medium; padding-top: 10px;">
+        <i>9-Emerald 2025-2026</i></h1>
+
+        <div class="row" style="padding-top: 50px;">
+        <div class="col">
+        <p>Mr. Buntile</p>
+        </div>
+
+        <div class="col">
+        <div style="background-color: #2c7d93; color: white; width: 80px; text-align: center; border-radius: 8px; margin-left: 68px;">OPEN</div>
+        </div>
+        </div>
+        </div>
+
+        <!--textbox shadow from https://getcssscan.com/css-box-shadow-examples-->
+</div>
+</div>
+</div>
 </body>
+
 </html>

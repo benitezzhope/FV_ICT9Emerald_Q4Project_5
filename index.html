@@ -4,8 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     
+</head>
+
+<style>
+    body{
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('whitebackground.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+ /* sidebar */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #4671aa;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #9bc7f4;
+}
+
+.box {
+            background-color: #4671aa; 
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+            margin-top:200px;
+            width: 400px;
+            margin-left: 650px;
+            margin-right: auto;
+            margin-top: 180px;
+
+}
+
+.forgot {
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+</style>
+
+<body>
+
+    
+<div class="sidenav">
+<img src="Josubera.png" style="height: 200px; width: 200px; border-radius: 5px; justify-content: center;">
+  <a href="dashboard.html">Dashboard</a>
+  <a href="notebooks.html">Virtual Notebook</a>
+  <a href="tasks.html">Tasks</a>
+  <a href="profile.html">Profile</a>
+   <a href="">Logout</a>
+</div>
+
+<form>
+
+<div class="box">
+
+        <h2 style="color: #ffbf00;">Login Form</h2>
+        
+        <label >Username</label><br>
+        <input type="text" id="username" placeholder="Enter here"  required style="width: 90%; padding: 10px; margin: 10px 0; border-radius: 15px; border: none; text-align: center;"><br>
+
+        <label>Password</label><br>
+        <input type="password" id="password" placeholder="********" required style="width: 90%; padding: 10px;margin: 10px 0; border-radius: 15px; border: none; text-align: center;"><br>
+
+         <p id="display"></p>
+
+
+    </form>
+
+    <div style="margin: 15px 0;">
+    <input type="checkbox" id="checked" onclick="message()"> 
+    <label for="checked">Stay logged in</label>
+    
+    <p id="message"></p>
+        
+        <p class="forgot" style="font-size: 15px; margin-top: 20px;">
+            Forgot username / password?
+        </p>
+
+        <a href="notebook.html">
+        <button onclick="checkLogin()" class="btn-login" style="background-color: #ffbf00; border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer; ">Login</button>
+        <button onclick="window.location.reload()" class="btn-cancel" style="background-color: #f8f9fa; border: none; padding: 10px 20px;border-radius: 15px; cursor: pointer;
+        " type="reset">Cancel</button>
+
+       
+
+
+   <script>
+
+        function message() {
+    let checked = document.getElementById("checked").checked;
+
+    switch(checked) {
+        case true:
+            document.getElementById("message").innerHTML = 
+                "Your session will stay active on this device.";
+            break;
+        case false:
+            document.getElementById("message").innerHTML = "";
+            break;
+    } 
+} 
+
+
+        let attempt_counter = 0;
+
+
+        function checkLogin(){
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let inside = "Welcome " + username + "!";
+            let not = "Access denied. Account locked after 3 attempts!";
+
+
+        while (attempt_counter < 5) {
+        if (username === "Sir_renn" && password === "iloveict") {
+            alert(inside);
+            attempt_counter = 0; // reset attempts after successful login
+            document.getElementById("display").innerHTML = "";
+            window.location.href = "index.html";
+
+
+            break; // stop loop
+        }
+
+
+        else {
+            attempt_counter++;
+            document.getElementById("display").innerHTML =
+                "Incorrect username and/or password. Attempt " + attempt_counter + " of 5 ";
+            break; 
+        }
+
+
+        }
+        if (attempt_counter >= 5) {
+                alert(not);
+                document.getElementById("loginBTN").disabled = true; // disable button
+            }
+        }
+    </script>
+
+
 </body>
 </html>

@@ -15,45 +15,18 @@
         background-size: cover;
 
     }
-
- /* sidebar */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #4671aa;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #9bc7f4;
-}
-
 .box {
-            background-color: #4671aa; 
+            background-color: #f7f4f4; 
             padding: 30px;
             border-radius: 20px;
             width: 300px;
             text-align: center;
-            color: white;
+            color: #4671aa;
             box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
-            margin-top:200px;
             width: 400px;
-            margin-left: 650px;
-            margin-right: auto;
-            margin-top: 180px;
+            margin: auto;
+            margin-top: 100px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -61,34 +34,23 @@
     font-size: 15px;
     margin-top: 20px;
     cursor: pointer;
-    color: white;
+    color: #ffbf00;
 }
 
 </style>
 
 <body>
 
-    
-<div class="sidenav">
-<img src="Josubera.png" style="height: 200px; width: 200px; border-radius: 5px; justify-content: center;">
-  <a href="dashboard.html">Dashboard</a>
-  <a href="notebooks.html">Virtual Notebook</a>
-  <a href="tasks.html">Tasks</a>
-  <a href="profile.html">Profile</a>
-   <a href="">Logout</a>
-</div>
 
 <form>
-
 <div class="box">
+        <img src="Josubera.png" style="height: 130px; width: 130px;">
+        <h1 style="color: #ffbf00;">Login Form</h1>
+        <label><b>Username</b></label><br>
+        <input type="text" id="username" placeholder="Enter username..."  required style="width: 90%; padding: 10px; margin: 10px 0; border-radius: 15px; text-align: center; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; border: none;"><br>
 
-        <h2 style="color: #ffbf00;">Login Form</h2>
-        
-        <label >Username</label><br>
-        <input type="text" id="username" placeholder="Enter here"  required style="width: 90%; padding: 10px; margin: 10px 0; border-radius: 15px; border: none; text-align: center;"><br>
-
-        <label>Password</label><br>
-        <input type="password" id="password" placeholder="********" required style="width: 90%; padding: 10px;margin: 10px 0; border-radius: 15px; border: none; text-align: center;"><br>
+        <label><b>Password</b></label><br>
+        <input type="password" id="password" placeholder="********" required style="width: 90%; padding: 10px;margin: 10px 0; border-radius: 15px; text-align: center; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; border: none;"><br>
 
          <p id="display"></p>
 
@@ -105,9 +67,9 @@
             Forgot username / password?
         </p>
 
-        <a href="notebook.html">
-        <button onclick="checkLogin()" class="btn-login" style="background-color: #ffbf00; border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer; ">Login</button>
-        <button onclick="window.location.reload()" class="btn-cancel" style="background-color: #f8f9fa; border: none; padding: 10px 20px;border-radius: 15px; cursor: pointer;
+        <a href="dashboard.html">
+        <button onclick="checkLogin()" class="btn-login" style="background-color: #4671aa; border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer; ">Login</button>
+        <button onclick="window.location.reload()" class="btn-cancel" style="background-color: #cecece; border: none; padding: 10px 20px;border-radius: 15px; cursor: pointer;
         " type="reset">Cancel</button>
 
        

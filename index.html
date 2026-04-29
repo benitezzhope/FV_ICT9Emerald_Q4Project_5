@@ -68,8 +68,8 @@
         </p>
 
         <a href="dashboard.html">
-        <button onclick="checkLogin()" class="btn-login" style="background-color: #4671aa; border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer; ">Login</button>
-        <button onclick="window.location.reload()" class="btn-cancel" style="background-color: #cecece; border: none; padding: 10px 20px;border-radius: 15px; cursor: pointer;
+        <button onclick="checkLogin()" class="btn-login" style="background-color: #4671aa; border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer;">Login</button>
+        <button onclick="window.location.reload()" class="btn-cancel" style="background-color: #cecece; border: none; padding: 10px 20px; border-radius: 15px; cursor: pointer;
         " type="reset">Cancel</button>
 
        
@@ -83,7 +83,7 @@
     switch(checked) {
         case true:
             document.getElementById("message").innerHTML = 
-                "Your session will stay active on this device.";
+                "<p><i>Your session will stay active on this device.</i></p>";
             break;
         case false:
             document.getElementById("message").innerHTML = "";
@@ -99,7 +99,7 @@
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
             let inside = "Welcome " + username + "!";
-            let not = "Access denied. Account locked after 3 attempts!";
+            let not = "Access denied. Account locked after 5 attempts!";
 
 
         while (attempt_counter < 5) {
@@ -107,7 +107,7 @@
             alert(inside);
             attempt_counter = 0; // reset attempts after successful login
             document.getElementById("display").innerHTML = "";
-            window.location.href = "index.html";
+            window.location.href = "dashboard.html";
 
 
             break; // stop loop
@@ -116,9 +116,8 @@
 
         else {
             attempt_counter++;
-            document.getElementById("display").innerHTML =
-                "Incorrect username and/or password. Attempt " + attempt_counter + " of 5 ";
-            break; 
+           alert("Invalid username and/or password. Attempt " + attempt_counter + " of 5. ");
+            break; // stop loop for this click
         }
 
 

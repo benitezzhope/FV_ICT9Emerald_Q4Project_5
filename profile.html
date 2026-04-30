@@ -8,43 +8,40 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-image: url('whitebackground.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: #333;
+            background: #f3f5f8;
+            color: #222;
         }
 
         .sidenav {
-            height: 100%;
-            width: 200px;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #ffffff;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-            padding-top: 20px;
+            width: 200px;
+            height: 100%;
+            background: #fff;
+            padding: 24px 16px;
+            box-shadow: 1px 0 8px rgba(0, 0, 0, 0.08);
         }
 
         .sidenav img {
             display: block;
-            margin: 0 auto 20px;
+            margin: 0 auto 18px;
             width: 100px;
             height: 100px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 12px;
         }
 
         .sidenav a {
             display: block;
-            padding: 12px 20px;
-            text-decoration: none;
-            font-size: 18px;
+            margin: 12px 0;
             color: #4671aa;
+            text-decoration: none;
+            font-size: 17px;
         }
 
         .sidenav a:hover,
         .sidenav a.active {
-            background-color: #f4faff;
             color: #1b4f8f;
         }
 
@@ -52,136 +49,74 @@
             margin-left: 220px;
             padding: 40px;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
         }
 
-        .profile-wrapper {
-            width: 100%;
-            max-width: 900px;
+        .grid {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 30px;
-            align-items: start;
-        }
-
-        .profile-sidebar,
-        .profile-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
-            padding: 30px;
-        }
-
-        .profile-sidebar {
-            text-align: center;
-        }
-
-        .profile-sidebar h2 {
-            margin: 20px 0 10px;
-            font-size: 24px;
-            color: #1f497d;
-        }
-
-        .profile-sidebar p {
-            margin: 0;
-            color: #666;
-        }
-
-        .avatar-circle {
-            width: 160px;
-            height: 160px;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 600px;
             margin: 0 auto;
+            width: 100%;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            min-height: 300px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 18px;
             border-radius: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #5da9ff 0%, #83d0ff 100%);
+            justify-content: center;
+            background: #0366d6;
             color: #fff;
-            font-size: 60px;
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+            font-size: 44px;
         }
 
-        .upload-button {
-            margin-top: 25px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 22px;
-            border: 2px dashed #c4d7f2;
-            border-radius: 12px;
-            background: #eef7ff;
-            color: #1b4f8f;
-            cursor: pointer;
-            font-weight: 600;
+        h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
         }
 
-        .profile-card h3 {
-            margin-top: 0;
-            font-size: 22px;
-            color: #1f497d;
-        }
-
-        .profile-card p {
-            margin: 0 0 8px;
+        p {
+            margin: 0 0 16px;
             color: #555;
         }
 
-        .info-box {
-            margin-top: 20px;
+        .upload,
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: #0366d6;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        .info-box p {
+        .info-row {
             display: flex;
             justify-content: space-between;
-            padding: 15px 18px;
-            border-radius: 14px;
-            background: #f7fafe;
-            margin-bottom: 12px;
+            padding: 12px 16px;
+            background: #eef4ff;
+            border-radius: 10px;
+            margin-bottom: 10px;
             color: #333;
         }
 
-        .info-box p span:first-child {
-            color: #777;
-        }
-
-        .change-password {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 26px;
-            border: none;
-            border-radius: 12px;
-            background: #2e8bff;
-            color: #fff;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        @media (max-width: 900px) {
-            .profile-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .sidenav {
-                width: 100%;
-                position: relative;
-                height: auto;
-                padding-bottom: 10px;
-            }
-
-            .main-content {
-                margin-left: 0;
-                padding: 20px;
-            }
-
-            .sidenav a {
-                font-size: 16px;
-                padding: 10px 16px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -195,26 +130,24 @@
     </div>
 
     <div class="main-content">
-        <div class="profile-wrapper">
-            <div class="profile-sidebar">
-                <div class="avatar-circle">JD</div>
-                <h2>PROFILE</h2>
-                <p>Student Information</p>
-                <label class="upload-button">
-                    Choose File
-                    <input type="file" accept="image/*" style="display:none;">
+        <div class="grid">
+            <div class="card">
+                <div class="avatar">?</div>
+                <h2>Profile</h2>
+                <p>Student information</p>
+                <label class="upload">
+                    Change photo
+                    <input type="file" accept="image/*" style="display:none">
                 </label>
             </div>
 
-            <div class="profile-card">
-                <h3>Student Information</h3>
-                <div class="info-box">
-                    <p><span>Student ID</span><span>SN123456</span></p>
-                    <p><span>Contact Number</span><span>+639158000001</span></p>
-                    <p><span>Email Address</span><span>delacruz.jb@st.montecerni.edu.ph</span></p>
-                    <p><span>Gender</span><span>Male</span></p>
-                </div>
-                <a href="#" class="change-password">Change Password</a>
+            <div class="card">
+                <h2>Details</h2>
+                <div class="info-row"><div>ID</div><div>?</div></div>
+                <div class="info-row"><div>Phone</div><div>+?</div></div>
+                <div class="info-row"><div>Email</div><div>@montessori.edu.ph</div></div>
+                <div class="info-row"><div>Gender</div><div>?</div></div>
+                <a href="index.html" class="button">Change password</a>
             </div>
         </div>
     </div>

@@ -3,70 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Profile</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('whitebackground.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
+        }
+
+        .sidenav img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .sidenav a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #4671aa;
+        }
+
+        .sidenav a:hover,
+        .sidenav a.active {
+            background-color: #f4faff;
+            color: #1b4f8f;
+        }
+
+        .main-content {
+            margin-left: 220px;
+            padding: 40px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .profile-wrapper {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .profile-sidebar,
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+        }
+
+        .profile-sidebar {
+            text-align: center;
+        }
+
+        .profile-sidebar h2 {
+            margin: 20px 0 10px;
+            font-size: 24px;
+            color: #1f497d;
+        }
+
+        .profile-sidebar p {
+            margin: 0;
+            color: #666;
+        }
+
+        .avatar-circle {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #5da9ff 0%, #83d0ff 100%);
+            color: #fff;
+            font-size: 60px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .upload-button {
+            margin-top: 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 22px;
+            border: 2px dashed #c4d7f2;
+            border-radius: 12px;
+            background: #eef7ff;
+            color: #1b4f8f;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .profile-card h3 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #1f497d;
+        }
+
+        .profile-card p {
+            margin: 0 0 8px;
+            color: #555;
+        }
+
+        .info-box {
+            margin-top: 20px;
+        }
+
+        .info-box p {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 18px;
+            border-radius: 14px;
+            background: #f7fafe;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .info-box p span:first-child {
+            color: #777;
+        }
+
+        .change-password {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 26px;
+            border: none;
+            border-radius: 12px;
+            background: #2e8bff;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .profile-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .sidenav {
+                width: 100%;
+                position: relative;
+                height: auto;
+                padding-bottom: 10px;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .sidenav a {
+                font-size: 16px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
 </head>
-<style>
-    body{
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-image: url('whitebackground.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #4671aa;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #9bc7f4;
-}
-
-.sidebar img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 130px;
-}
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-.main-content {
-  margin-left: 200px; /* match sidebar width */
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  padding-top: 80px;
-}
-</style>
 <body>
+    <div class="sidenav">
+        <img src="Josubera.png" alt="Profile Logo">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="notebooks.html">Virtual Notebook</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="index.html">Logout</a>
+    </div>
 
-<div class="sidenav">
-<img src="Josubera.png" class="sidebar img" style="height: 100px; width: 100px; border-radius: 5px; align-items: center;">
-  <a href="dashboard.html">Dashboard</a>
-  <a href="notebooks.html">Virtual Notebook</a>
-  <a href="tasks.html">Tasks</a>
-  <a href="profile.html">Profile</a>
-   <a href="index.html">Logout</a>
-</div>
-<!--Sidebar code from ws3schools-->
-<body>
+    <div class="main-content">
+        <div class="profile-wrapper">
+            <div class="profile-sidebar">
+                <div class="avatar-circle">JD</div>
+                <h2>PROFILE</h2>
+                <p>Student Information</p>
+                <label class="upload-button">
+                    Choose File
+                    <input type="file" accept="image/*" style="display:none;">
+                </label>
+            </div>
+
+            <div class="profile-card">
+                <h3>Student Information</h3>
+                <div class="info-box">
+                    <p><span>Student ID</span><span>SN123456</span></p>
+                    <p><span>Contact Number</span><span>+639158000001</span></p>
+                    <p><span>Email Address</span><span>delacruz.jb@st.montecerni.edu.ph</span></p>
+                    <p><span>Gender</span><span>Male</span></p>
+                </div>
+                <a href="#" class="change-password">Change Password</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

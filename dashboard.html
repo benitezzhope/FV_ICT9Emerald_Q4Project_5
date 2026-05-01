@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
 <style>
-    body{
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-image: url('dash.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('dash.jpg') no-repeat center/cover;
+}
+
 .sidenav {
   height: 100%;
   width: 200px;
@@ -26,100 +26,92 @@
 
 .sidenav a {
   display: block;
-  padding: 12px 16px;   
-  font-size: 18px;     
-  line-height: 1.4;  
+  padding: 12px 16px;  
+  font-size: 18px;      
+  line-height: 1.4;     
   color: #4671aa;
   text-decoration: none;
-  margin: 0;         
+  margin: 0;           
 }
 
 .sidenav a:hover {
   background-color: #e9e9e9;
 }
+.main-content { 
+  padding: 80px 30px 30px; 
+  display: flex; 
+  justify-content: center; 
+  backdrop-filter: blur(6px); 
+    }
 
-.main {
-  margin-left: 160px;
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+
+
+.box {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    margin-left: 180px;
+    min-height: 400px; 
+
+
+
 }
 
-.main-content {
-  margin-left: 200px;
-  padding: 80px 30px 30px;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  backdrop-filter: blur(5px);
-}
-#qwp{
-  background-color: rgb(241, 237, 237);
-  width: 600px;
-  height: 1900x;
-  border: 1px solid black;
-  border-radius: 20px;
-  box-shadow: 0px 0px 6px;
-  margin-left: 493px;
-  margin-right: 300px;
-  padding: 10px;
+p {
+    margin: 6px 0 6px 15px; color: #333;
 }
 
 </style>
+</head>
+
 <body>
 
 <div class="sidenav">
 <center>
 <img src="image-removebg-preview (3).png" style="height: 100px; width: 130px; border-radius: 5px;">
 </center>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="notebooks.html">Virtual Notebook</a>
-  <a href="tasks.html">Tasks</a>
-  <a href="profile.html">Profile</a>
-   <a href="index.html">Logout</a>
+   
+    <a href="dashboard.html">Dashboard</a>
+    <a href="notebooks.html">Virtual Notebook</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="profile.html">Profile</a>
+    <a href="index.html">Logout</a>
 </div>
-<!--Sidebar code from ws3schools-->
 
-<h1 style="text-align: center; margin-left: 105px;">Hero Training Course - Year 1</h1>
+<div class="main-content">
+    <div class="box">
+  
+        <h1 style="text-align: center; margin-bottom: 20px; color: #ffbf00;">Hero Training Course - Year 1</h1>
 
-<br>
+        <h3 style="margin-top: 25px; color: rgb(156, 78, 78); padding-left: 10px;">I. First Quarter</h3>
+        <p style="margin: 6px 0 6px 15px; color: #333;
+">Introduction to Quirks</p>
+        <p>Basic Quirk Control & Safety</p>
+        <p>Hero Ethics and Responsibilities</p>
+        <p>Practical: Basic Combat & Rescue Simulation</p>
 
-<div id="qwp">
-  <h3> I. First Quarter</h3>
-  <ul>
-    <li>Introduction to Quirks</li>
-    <li>Basic Quirk Control & Safety</li>
-    <li>Hero Ethics and Responsibilities</li>
-    <li>Practical: Basic Combat & Rescue Simulation</li>
-  </ul>
-  <br>
+        <h3 style="margin-top: 25px; color: rgb(156, 78, 78); padding-left: 10px;"> IV. Fourth Quarter</h3>
+        <p>Advanced Quirk Application</p>
+        <p>Combat Techniques and Strategy</p>
+        <p>Teamwork and Coordination</p>
+        <p>Practical: Team Battle Trial</p>
 
-  <h3>II. Second Quarter</h3>
-  <ul>
-    <li>Advanced Quirk Application</li>
-    <li>Combat Techniques and Strategy</li>
-    <li>Teamwork and Coordination</li>
-    <li>Practical: Team Battle Trial</li>
-  </ul>
+        <h3 style="margin-top: 25px; color: rgb(156, 78, 78); padding-left: 10px;"> IV. Fourth Quarter</h3>
+        <p>Advanced Quirk Techniques</p>
+        <p>Combat Strategy & Tactics</p>
+        <p>Internship Preparation</p>
+        <p>Practical: Mock Villain Operation</p>
 
-  <br>
-
-  <h3>III. Third Quarter</h3>
-  <ul>
-    <li>Advanced Quirk Techniques</li>
-    <li>Combat Strategy & Tactics</li>
-    <li>Internship Preparation</li>
-    <li>Practical: Mock Villain Operation</li>
-  </ul>
-
-  <br>
-
-  <h3>IV. Fourth Quarter</h3>
-  <ul>
-    <li>Work Study Under Pro Heroes</li>
-    <li>Crisis Response Training</li>
-    <li>Provisional License Preparation</li>
-    <li>Practical: Provisional Hero License Exam</li>
-  </ul>
+        <h3 style="margin-top: 25px; color: rgb(156, 78, 78); padding-left: 10px;"> IV. Fourth Quarter</h3>
+        <p>Work Study Under Pro Heroes</p>
+        <p>Crisis Response Training</p>
+        <p>Provisional License Preparation</p>
+        <p>Practical: Provisional Hero License Exam</p>
+    </div>
 </div>
-<br>
+
+</body>
 </html>

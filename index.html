@@ -10,9 +10,16 @@
 <style>
     body{
        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-image: url('whitebackground.jpg');
+        background-image: url('loginbg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  backdrop-filter: blur(6px);
+
+
 
     }
 .box {
@@ -21,7 +28,7 @@
             border-radius: 20px;
             width: 300px;
             text-align: center;
-            color: #4671aa;
+            color: rgb(156, 78, 78);
             box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
             width: 400px;
             margin: auto;
@@ -47,10 +54,10 @@
     <form>
         <img src="image-removebg-preview (3).png" style="height: 100px; width: 130px;">
         <h1 style="color: #ffbf00;">Login Form</h1>
-        <label><b>Username</b></label><br>
-        <input type="text" id="username" placeholder="Enter username..."  required style="width: 90%; padding: 10px; margin: 10px 0; border-radius: 15px; text-align: center; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; border: none;"><br>
+        <label style="color: rgb(156, 78, 78);"><b>Username</b></label><br>
+        <input type="text" id="username" placeholder="Enter username..."  required style="width: 90%; padding: 10px; margin: 10px 0; border-radius: 15px; text-align: center; box-shadow: rgba(93, 50, 50, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; border: none;"><br>
 
-        <label><b>Password</b></label><br>
+        <label style="color: rgb(156, 78, 78)"><b>Password</b></label><br>
         <input type="password" id="password" placeholder="Enter password..." required style="width: 90%; padding: 10px;margin: 10px 0; border-radius: 15px; text-align: center; box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; border: none;"><br>
 
          <p id="display"></p>
@@ -60,7 +67,7 @@
 
     <div style="margin: 15px 0;">
     <input type="checkbox" id="checked" onclick="message()"> 
-    <label for="checked">Stay logged in</label>
+    <label for="checked" style="color: rgb(156, 78, 78)">Stay logged in</label>
     
     <p id="message"></p>
         
@@ -68,7 +75,7 @@
             Forgot username / password?
         </p>
 
-        <input type="button" onclick="window.location.href='dashboard.html'" class="btn-login" style="background-color: #4671aa; border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer;" 
+        <input type="button" onclick="window.location.href='dashboard.html'" class="btn-login" style="background-color: rgb(156, 78, 78); border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer;" 
        value="Login">        
        <button onclick="window.location.reload()" class="btn-cancel" style="background-color: #cecece; border: none; padding: 10px 20px; border-radius: 15px; cursor: pointer;
         " type="reset">Cancel</button>

@@ -9,18 +9,19 @@
 
 <style>
     body{
-        margin: 0;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('loginbg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('loginbg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         display: flex;
         justify-content: center;
         min-height: 100vh;
         backdrop-filter: blur(6px);
-
+        margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 
@@ -80,8 +81,7 @@
             Forgot username / password?
         </p>
 
-        <input type="button" onclick="window.location.href='dashboard.html'" class="btn-login" style="background-color: rgb(156, 78, 78); border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer;" 
-       value="Login">        
+       <input type="button" onclick="checkLogin()" id="loginBTN" class="btn-login" style="background-color: rgb(156, 78, 78); border: none; padding: 10px 20px; border-radius: 15px; color: white; cursor: pointer;" value="Login">    
        <button onclick="window.location.reload()" class="btn-cancel" style="background-color: #cecece; border: none; padding: 10px 20px; border-radius: 15px; cursor: pointer;
         " type="reset">Cancel</button>
 
